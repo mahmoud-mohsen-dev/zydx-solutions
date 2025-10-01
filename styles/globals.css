@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  /* --background: #ffffff;
+  --foreground: #171717; */
+
+  --font-roboto: var(--font-roboto); /* Roboto as default */
+}
