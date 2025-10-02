@@ -55,6 +55,7 @@ const config = {
         grey: {
           light: "#fafafa",
           "light-hover": "#f7f7f7",
+          'light-medium': '#E4E4E7',
           "light-active": "#efefef",
           DEFAULT: "#cccccc",
           hover: "#b8b8b8",
@@ -79,7 +80,14 @@ const config = {
         navbar: "0px 5px 10px 6px rgba(0,0,0,0.12)",
         "what_we_do": "0px 4px 12px 0px rgba(155,155,155,0.25)",
       },
+      dropShadow: {
+        'dark-mode-icon': '0 4px 4px rgba(0,0,0,0.25)',
+      },
       fontSize: {
+        // 📌 Extra tiny
+        "fluid-max12": "clamp(0.625rem, 0.5625rem + 0.2vw, 0.75rem)", 
+        // labels, footer links | min: 10px, max: 12px
+
         // 📌 Extra small text
         "fluid-xs": "clamp(0.75rem, 0.6875rem + 0.2vw, 0.875rem)", 
         // captions, footnotes | min: 12px, max: 14px

@@ -3,16 +3,16 @@ import { Image } from "@heroui/image";
 
 function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center">
+    <section className="relative flex w-full flex-col items-center justify-center">
       <Image
         alt="background hero section image"
         src="/sections/homepage/hero-background.png"
-        // width={"100%"}
-        // height={500}
-        // className="absolute top-0 left-0 z-[10] h-full min-h-full w-full min-w-full object-cover"
+        className="absolute top-0 left-1/2 z-[5] min-h-[550px] -translate-x-1/2 object-cover object-bottom xl:max-h-[600px] xl:min-h-0"
+        classNames={{ wrapper: "!max-w-full w-full" }}
       />
 
-      <div className="font-poppins absolute top-[260px] z-[20]">
+      {/* <div className="font-poppins absolute top-[260px] z-[20]"> */}
+      <div className="font-poppins z-[10] mt-[200px] lg:mt-[260px]">
         <div className="container text-center">
           <h1 className="text-violet-darker dark:text-violet-light text-[clamp(1.5rem,1.3571rem+0.7143vw,2rem)] leading-normal font-semibold">
             We Build Digital Solutions That Power Every Industry

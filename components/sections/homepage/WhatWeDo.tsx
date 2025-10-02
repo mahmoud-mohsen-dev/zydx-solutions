@@ -4,22 +4,14 @@ import { Image } from "@heroui/image";
 
 function WhatWeDo() {
   return (
-    <section className="font-poppins shadow-what_we_do container mt-3 mb-25 min-h-[447px] rounded-3xl px-8 pt-10 pb-[51px] lg:grid lg:grid-cols-[507px_1fr] lg:gap-[55px]">
+    <section className="font-poppins shadow-what_we_do container mt-[150px] mb-25 min-h-[447px] rounded-3xl px-8 pt-10 pb-[51px] md:grid md:grid-cols-[300px_1fr] md:gap-[55px] lg:grid-cols-[507px_1fr]">
       <div className="relative">
         <Image
           alt="What We Do Image"
-          // height={200}
           src="/sections/homepage/what-we-do-1.png"
-          // width={300}
-          // className="object-cover"
-          // classNames={{
-          //   wrapper: "w-full",
-          //   img: "w-full object-cover",
-          // }}
-
-          className="max-h-[288px] w-[507px] object-cover object-center"
+          className="w-full object-cover object-center md:w-[507px] lg:max-h-[288px]"
         />
-        <div className="absolute right-0 bottom-0 z-[10] hidden translate-x-[30px] lg:block">
+        <div className="absolute right-0 bottom-0 z-[10] hidden translate-x-[30px] md:block">
           <Image
             alt="What We Do Image"
             height={200}
@@ -29,7 +21,7 @@ function WhatWeDo() {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center gap-6">
+      <div className="mt-5 flex flex-col justify-center gap-6 lg:mt-0">
         <div className="flex items-center gap-1">
           <StarIcon size={28} />
           <span className="text-violet-darker dark:text-violet-light text-sm font-medium">

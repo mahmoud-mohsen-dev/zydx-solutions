@@ -23,7 +23,7 @@ export const MyNavbar = () => {
     <HeroUINavbar
       maxWidth="full"
       // position="sticky"
-      className="shadow-navbar fixed top-10 left-1/2 z-[200] container min-h-[84px] w-full -translate-x-1/2 rounded-2xl"
+      className="shadow-navbar fixed top-10 left-1/2 z-[200] container h-[64px] w-full -translate-x-1/2 rounded-2xl lg:h-[84px]"
       // style={{ backgroundColor: "background" }}
     >
       <NavbarContent className="flex w-full items-center justify-between">
@@ -38,6 +38,7 @@ export const MyNavbar = () => {
               width={49}
               height={52}
               quality={100}
+              className="h-[40px] w-[auto] object-cover object-center lg:h-[52px] lg:w-[49px]"
             />
           </NextLink>
         </NavbarBrand>
@@ -59,9 +60,13 @@ export const MyNavbar = () => {
         <NavbarItem className="hidden items-center gap-5 lg:flex">
           <ThemeSwitch
             classNames={{
-              wrapper: "w-[48px] h-[30px]",
+              wrapper:
+                "w-[48px] h-[30px] [&>svg]:!text-violet dark:[&>svg]:!text-grey-light dark:[&>svg]:!drop-shadow-dark-mode-icon",
+              // thumbIcon:
+              //   "text-violet dark:text-yellow-400 [&>svg]:!text-inherit [&>svg]:!text-violet dark:[&>svg]:!text-yellow-400",
             }}
-            className="border-grey-active flex items-center justify-center rounded-full border-1"
+            // className="border-grey-active flex items-center justify-center rounded-full border-1"
+            className="border-violet dark:bg-violet dark:border-violet flex items-center justify-center rounded-full border-1 bg-transparent"
           />
           <Button
             as={Link}
@@ -102,16 +107,6 @@ export const MyNavbar = () => {
               Contact Us
             </Link>
           </NavbarMenuItem>
-          {/* <Button
-            as={Link}
-            aria-label="contact-us"
-            color="primary"
-            href="/contact-us"
-            variant="solid"
-            className="dark:text-violet-darker text-grey-light mr-auto max-w-[200px] rounded-lg px-6"
-          >
-            Contact Us
-          </Button> */}
         </div>
       </NavbarMenu>
     </HeroUINavbar>
