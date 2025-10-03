@@ -149,6 +149,10 @@ const config = {
                 DEFAULT: "#663acd",
                 foreground: "#fafafa",
               }, 
+              secondary: {
+                DEFAULT: "#474747",
+                foreground: "#5c5c5c",
+              }
             } },
         dark: { 
           colors: { 
@@ -158,6 +162,10 @@ const config = {
               DEFAULT: "#d0c2f0",
               foreground: "#421559",
             },
+            secondary: {
+                DEFAULT: "#E4E4E7",
+                foreground: "#cccccc",
+              }
           }},
       },
     }),

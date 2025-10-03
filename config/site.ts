@@ -169,4 +169,36 @@ export const siteConfig = {
       ],
     },
   ],
+  ourServices: [
+    {
+      id: 1,
+      title: "Development",
+      description: "Our development is pixel perfect in all ways.",
+      icon: { src: "/icons/code.svg", alt: "Development" },
+    },
+    {
+      id: 2,
+      title: "E-commerce",
+      description: "We have a best team for your shopping websites.",
+      icon: { src: "/icons/bag.svg", alt: "Development" },
+    },
+    {
+      id: 3,
+      title: "CRM Solutions",
+      description: "We enhance customer experiences for success.",
+      icon: { src: "/icons/medal.svg", alt: "Development" },
+    },
+    {
+      id: 4,
+      title: "Web Design",
+      description: "We create vibrant, intuitive and minimalist web",
+      icon: { src: "/icons/pen-tree.svg", alt: "Web Design" },
+    },
+    {
+      id: 5,
+      title: "IT Support",
+      description: "We offers expert assistance for your IT issues.",
+      icon: { src: "/icons/people.svg", alt: "IT Support" },
+    },
+  ],
 };

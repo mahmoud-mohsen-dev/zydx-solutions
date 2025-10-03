@@ -38,6 +38,40 @@ export const StarIcon: React.FC<IconSvgProps> = ({
   );
 };
 
+type WaveUnderlineProps = React.SVGProps<SVGSVGElement> & {
+  size?: number;
+  width?: number;
+  height?: number;
+};
+
+export const WaveUnderline: React.FC<WaveUnderlineProps> = ({
+  size = 88, // width
+  width,
+  height,
+  ...props
+}) => {
+  // keep aspect ratio (88:12)
+  const finalWidth = size || width || 88;
+  const finalHeight = height || finalWidth / (88 / 12);
+
+  return (
+    <svg
+      width={finalWidth}
+      height={finalHeight}
+      viewBox="0 0 88 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M87 3.52648C81.3958 9.06132 73.9572 15.8731 68.9914 5.93397C64.6068 -2.84219 57.6882 1.72547 51.5843 7.0374C49.7576 8.62711 46.5319 11.1899 43.8329 10.6152C41.3167 10.0794 39.1522 6.25399 36.9503 4.86397C32.3923 1.98669 24.8291 6.34117 20.3784 7.73959C13.8672 9.78542 7.81678 11.6586 1 10.749"
+        stroke="currentColor"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
   width,
