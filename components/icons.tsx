@@ -72,6 +72,44 @@ export const WaveUnderline: React.FC<WaveUnderlineProps> = ({
   );
 };
 
+export const TickSquare: React.FC<IconSvgProps> = ({
+  size = 18,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    width={size || width}
+    height={size || height}
+    viewBox="0 0 18 18"
+    fill="none"
+    {...props}
+  >
+    <path
+      d="M6.53449 16.221H10.7786C14.3154 16.221 15.7301 14.8063 15.7301 11.2695V7.02544C15.7301 3.48868 14.3154 2.07397 10.7786 2.07397H6.53449C2.99773 2.07397 1.58303 3.48868 1.58303 7.02544V11.2695C1.58303 14.8063 2.99773 16.221 6.53449 16.221Z"
+      stroke="#663ACD"
+      strokeWidth="1.06103"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5.65031 9.14756L7.65211 11.1494L11.6628 7.14575"
+      stroke="#663ACD"
+      strokeWidth="1.06103"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const TickCircle = () => {
+  return (
+    <div className="bg-violet-light flex h-[34px] w-[34px] items-center justify-center rounded-full">
+      <TickSquare />
+    </div>
+  );
+};
+
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
   width,

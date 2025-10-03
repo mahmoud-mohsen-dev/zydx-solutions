@@ -55,6 +55,7 @@ const config = {
         grey: {
           light: "#fafafa",
           "light-hover": "#f7f7f7",
+          "light-hover-2": "#FEFBFF",
           'light-medium': '#E4E4E7',
           "light-active": "#efefef",
           DEFAULT: "#cccccc",
