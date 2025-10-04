@@ -1,3 +1,4 @@
+import ContactUsSection from "@/components/sections/contactUs/ContactUsSection";
 import BusinessArticles from "@/components/sections/homepage/BusinessArticles";
 import ClientReviewsSection from "@/components/sections/homepage/ClientReviewsSection";
 import HeroSection from "@/components/sections/homepage/HeroSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <OurProducts />
       <ClientReviewsSection />
       <BusinessArticles />
+      <ContactUsSection />
     </>
   );
 }

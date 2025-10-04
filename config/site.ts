@@ -13,8 +13,8 @@ export const siteConfig = {
       href: "/company",
       children: [
         {
-          label: "FAQ",
-          href: "/faq",
+          label: "Contact Us",
+          href: "/contact-us",
         },
         {
           label: "About",
@@ -55,8 +55,8 @@ export const siteConfig = {
       href: "/company",
       children: [
         {
-          label: "FAQ",
-          href: "/faq",
+          label: "Contact Us",
+          href: "/contact-us",
         },
         {
           label: "About",

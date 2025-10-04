@@ -70,33 +70,52 @@ const config = {
           dark: "#999999",
           'normal':'#838790',
           "dark-hover": "#7a7a7a",
+          'darker-hover': "#828282",
           "dark-active": "#5c5c5c",
+          'dark-medium': "#5D5D5D",
           darker: "#474747",
         },
+        // Black shades
         black:{
-          dark: '#212529'
-        }
-        // Background / Foreground tokens
-        // background: {
-        //   light: "#fafafa",
-        //   dark: "#1d0927",
-        // },
-        // foreground: {
-        //   light: "#1d0927",
-        //   dark: "#fafafa",
-        // },
-        
+          dark: '#212529',
+          darker: '#272727'
+        },
+        // Blue shades
+        blue: {
+          'medium': '#30AAFF',
+          DEFAULT:'#2D8CFE'
+        },
+        // Orange shades
+        orange: {
+          medium: '#FF7F22',
+          DEFAULT: "#D76B1D"
+        },
+        // Green shades
+        green: {
+          medium: '#17AD5E',
+          DEFAULT: "#094727"
+        },
+        // Red shades
+        red: {
+          vibrant: '#FF6384',
+          DEFAULT:'#B22334'
+        }        
       },
       boxShadow: {
         navbar: "0px 5px 10px 6px rgba(0,0,0,0.12)",
         "what_we_do": "0px 4px 12px 0px rgba(155,155,155,0.25)",
         "product_card": "0px 3px 15px 3.75px rgba(0,0,0,0.03)",
-        "article_business_card": "0px 0px 5.02px 0.4px rgba(0,0,0,0.25)"
+        "article_business_card": "0px 0px 5.02px 0.4px rgba(0,0,0,0.25)",
+        "contact_us_form": "0px 4px 24px 0px rgba(169,169,169,0.40)"
       },
       dropShadow: {
         'dark-mode-icon': '0 4px 4px rgba(0,0,0,0.25)',
       },
       fontSize: {
+        // 📌 Very Extra tiny
+        "fluid-max10": "clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem)", 
+        // mini text, small description | min: 8px, max: 10px
+       
         // 📌 Extra tiny
         "fluid-max12": "clamp(0.625rem, 0.5625rem + 0.2vw, 0.75rem)", 
         // labels, footer links | min: 10px, max: 12px
