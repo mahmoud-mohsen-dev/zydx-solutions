@@ -21,8 +21,8 @@ const reviews = [
         src: "/sections/homepage/temp-user-avatar-photo.png",
         alt: "user 1 avatar photo",
       },
-      name: "Salwa Alaa",
-      role: "Designer",
+      name: "Mahmoud Mohsen",
+      role: "Developer",
     },
     comment:
       "They truly understood our needs and provided innovative solutions that helped us grow our business faster than expected.",
@@ -34,47 +34,8 @@ const reviews = [
         src: "/sections/homepage/temp-user-avatar-photo.png",
         alt: "user 1 avatar photo",
       },
-      name: "Salwa Alaa",
-      role: "Designer",
-    },
-    comment:
-      "They truly understood our needs and provided innovative solutions that helped us grow our business faster than expected.",
-  },
-  {
-    id: 4,
-    user: {
-      profileImg: {
-        src: "/sections/homepage/temp-user-avatar-photo.png",
-        alt: "user 1 avatar photo",
-      },
-      name: "Salwa Alaa",
-      role: "Designer",
-    },
-    comment:
-      "They truly understood our needs and provided innovative solutions that helped us grow our business faster than expected.",
-  },
-  {
-    id: 5,
-    user: {
-      profileImg: {
-        src: "/sections/homepage/temp-user-avatar-photo.png",
-        alt: "user 1 avatar photo",
-      },
-      name: "Salwa Alaa",
-      role: "Designer",
-    },
-    comment:
-      "They truly understood our needs and provided innovative solutions that helped us grow our business faster than expected.",
-  },
-  {
-    id: 6,
-    user: {
-      profileImg: {
-        src: "/sections/homepage/temp-user-avatar-photo.png",
-        alt: "user 1 avatar photo",
-      },
-      name: "Salwa Alaa",
-      role: "Designer",
+      name: "Mohamed Fathy",
+      role: "Developer",
     },
     comment:
       "They truly understood our needs and provided innovative solutions that helped us grow our business faster than expected.",
@@ -92,17 +53,17 @@ function ClientReviewsSection() {
       </h2>
 
       {/* Slider Container */}
-      <div className="relative w-full overflow-x-hidden pt-[43px] pb-25">
-        <div className="animate-infinite-scroll flex gap-8">
+      <div className="relative w-full overflow-hidden pt-[43px] pb-25">
+        <ul className="animate-infinite-scroll flex w-fit gap-8">
           {doubledReviews.map((review) => (
-            <div
+            <li
               key={review.id + Math.random()} // unique key since we duplicate
-              className="w-[80%] flex-shrink-0 sm:w-1/2 lg:w-1/3"
+              className={`w-[256px] flex-shrink-0 select-none sm:w-[384px] md:w-[522px]`}
             >
               <ClientReviewCard review={review} />
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

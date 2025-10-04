@@ -18,7 +18,7 @@ function ClientReviewCard({
   };
 }) {
   return (
-    <div className="shadow-navbar relative flex flex-col gap-6 rounded-4xl px-[31px] py-[52px]">
+    <div className="shadow-navbar dark:shadow-what_we_do relative flex flex-col gap-6 rounded-4xl px-[31px] py-[52px]">
       <div className="absolute -top-[23px] left-[30px]">
         <DoubleQuote size={60} />
       </div>
