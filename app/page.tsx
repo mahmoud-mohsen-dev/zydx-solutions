@@ -1,3 +1,4 @@
+import ClientReviewsSection from "@/components/sections/homepage/ClientReviewsSection";
 import HeroSection from "@/components/sections/homepage/HeroSection";
 import OurProducts from "@/components/sections/homepage/OurProducts";
 import OurServices from "@/components/sections/homepage/OurServices";
@@ -14,6 +15,7 @@ export default function Home() {
       <ServiceDescription />
       <ShowCaseOfOurWork />
       <OurProducts />
+      <ClientReviewsSection />
     </>
   );
 }
