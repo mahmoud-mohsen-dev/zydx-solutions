@@ -24,7 +24,7 @@ function OurServices() {
           </p>
         </div>
       </div>
-      <div className="mt-8 grid grid-cols-1 gap-[64.25px] md:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-8 mb-[104px] grid grid-cols-1 gap-[64.25px] md:grid-cols-2 lg:grid-cols-5">
         {ourServices &&
           ourServices.length > 0 &&
           ourServices.map((service) => {

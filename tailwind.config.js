@@ -19,7 +19,13 @@ const config = {
     },
     container: {
       center: true,
-      padding: "1rem",
+      padding: {
+        DEFAULT: "1rem", // base padding
+        sm: "1rem",
+        md: "1rem",      // applies from md screen
+        lg: "0px",       // overrides at lg and up
+        xl: "0px",
+      },
       screens: {
         md: "46rem",       // 736px
         lg: "60.25rem",    // 964px
@@ -96,6 +102,10 @@ const config = {
         // 📌 Small body
         "fluid-sm": "clamp(0.875rem, 0.75rem + 0.3vw, 1rem)", 
         // small text, secondary body | min: 14px, max: 16px
+
+        // 📌 Medium body
+        "fluid-max18": "clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem)", 
+        // medium text | min: 16px, max: 18px
 
         // 📌 Base body
         "fluid-base": "clamp(1rem, 0.875rem + 0.4vw, 1.25rem)", 
