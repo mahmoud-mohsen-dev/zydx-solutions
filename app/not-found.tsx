@@ -5,7 +5,7 @@ import NextImage from "next/image";
 
 export default function NotFoundPage() {
   return (
-    <div className="mt-[124px] flex min-h-[calc(100vh-124px)] flex-col items-center justify-center">
+    <div className="mt-[124px] flex min-h-[calc(100vh-124px)] flex-col items-center justify-center pb-5">
       <Image
         as={NextImage}
         src="/sections/404-error-with-a-cute-animal-bro.svg"

@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -17,15 +18,20 @@ import { ThemeSwitch } from "@/components/sections/navbar/theme-switch";
 import Image from "next/image";
 import MyNavLink from "./MyNavLink";
 import MyNavDropdown from "./MyNavDropdown";
+import MyAccordion from "../../UI/MyAccordion";
+import CustomAccordion from "./CustomAccordion";
+import { useState } from "react";
 
 export const MyNavbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="fixed top-10 left-1/2 z-[999] container -translate-x-1/2">
       <HeroUINavbar
         maxWidth="full"
-        // position="sticky"
         className="shadow-navbar h-[64px] rounded-2xl lg:h-[84px]"
-        // style={{ backgroundColor: "background" }}
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
       >
         <NavbarContent className="flex w-full items-center justify-between">
           <NavbarBrand as="li" className="max-w-fit gap-3">
@@ -47,12 +53,12 @@ export const MyNavbar = () => {
           <ul className="mx-2 hidden basis-full items-center justify-center gap-10.5 lg:flex">
             {siteConfig.navItems.map((item) =>
               Array.isArray(item?.children) && item?.children?.length > 0 ? (
-                <NavbarItem key={item.href}>
+                <NavbarItem key={v4()}>
                   <MyNavDropdown item={item} />
                 </NavbarItem>
               ) : (
-                <NavbarItem key={item.href}>
-                  <MyNavLink item={item} key={v4()} />
+                <NavbarItem key={v4()}>
+                  <MyNavLink item={item} />
                 </NavbarItem>
               ),
             )}
@@ -63,18 +69,19 @@ export const MyNavbar = () => {
               classNames={{
                 wrapper:
                   "w-[48px] h-[30px] [&>svg]:!text-violet dark:[&>svg]:!text-grey-light dark:[&>svg]:!drop-shadow-dark-mode-icon",
-                // thumbIcon:
-                //   "text-violet dark:text-yellow-400 [&>svg]:!text-inherit [&>svg]:!text-violet dark:[&>svg]:!text-yellow-400",
               }}
-              // className="border-grey-active flex items-center justify-center rounded-full border-1"
               className="border-violet dark:bg-violet dark:border-violet flex items-center justify-center rounded-full border-1 bg-transparent"
             />
             <Button
-              as={Link}
+              as={NextLink}
               aria-label="contact-us"
               color="primary"
               href="/contact-us"
               variant="solid"
+              onClick={() => {
+                // scroll to top
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               className="dark:text-violet-darker text-grey-light rounded-lg px-6"
             >
               Contact Us
@@ -90,24 +97,24 @@ export const MyNavbar = () => {
           <NavbarMenuToggle />
         </NavbarContent>
 
-        <NavbarMenu className="absolute top-0 pt-[160px]">
-          <div className="container flex flex-col gap-2">
-            {siteConfig.navMenuItems.map((item, index) => (
-              <NavbarMenuItem key={`${item}-${index}`}>
-                <Link
-                  color={index === 2 ? "primary" : "foreground"}
-                  href="#"
-                  size="lg"
-                >
-                  {item.label}
-                </Link>
-              </NavbarMenuItem>
-            ))}
-            <NavbarMenuItem key={`contact-us`}>
-              <Link color={"foreground"} href="#" size="lg">
-                Contact Us
-              </Link>
-            </NavbarMenuItem>
+        <NavbarMenu className="top-0 !h-svh pt-[160px] pb-10">
+          <div className="container flex flex-col gap-3">
+            {siteConfig.navMenuItems.map((item, index) => {
+              return Array.isArray(item?.children) &&
+                item?.children?.length > 0 ? (
+                <NavbarMenuItem key={v4()} className="accordion-menu-item">
+                  <CustomAccordion
+                    title={item.label}
+                    list={item.children}
+                    onClick={() => setIsMenuOpen(false)}
+                  />
+                </NavbarMenuItem>
+              ) : (
+                <NavbarMenuItem key={v4()}>
+                  <MyNavLink item={item} onClick={() => setIsMenuOpen(false)} />
+                </NavbarMenuItem>
+              );
+            })}
           </div>
         </NavbarMenu>
       </HeroUINavbar>

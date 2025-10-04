@@ -47,6 +47,10 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
+      label: "Home",
+      href: "/",
+    },
+    {
       label: "Company",
       href: "/company",
       children: [
@@ -82,6 +86,7 @@ export const siteConfig = {
       label: "FAQ",
       href: "/faq",
     },
+    { label: "Contact Us", href: "/contact-us" },
   ],
   footerLinks: [
     {
