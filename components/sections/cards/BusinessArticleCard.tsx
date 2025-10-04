@@ -1,4 +1,5 @@
-import Image from "next/image";
+// import Image from "next/image";
+import { Image } from "@heroui/image";
 import Link from "next/link";
 
 function BusinessArticleCard({
@@ -14,7 +15,7 @@ function BusinessArticleCard({
 }) {
   return (
     <Link href={link}>
-      <div className="shadow-what_we_do grid grid-cols-1 grid-rows-[1fr_23px_1fr] overflow-hidden rounded-[15px] min-[520px]:grid-cols-[1fr_23px_1fr] min-[520px]:grid-rows-1">
+      <div className="shadow-what_we_do grid grid-cols-1 grid-rows-[1fr_23px_1fr] overflow-hidden rounded-[15px] min-[520px]:grid-cols-[1fr_23px_1fr] min-[520px]:grid-rows-1 xl:grid-cols-[264px_23px_1fr]">
         <div className="relative col-[1_/_2] row-[1_/_3] min-[520px]:col-[1_/_3] min-[520px]:row-[1_/_2]">
           <Image
             src={image.src}
@@ -22,6 +23,7 @@ function BusinessArticleCard({
             width={264}
             height={197}
             className="z-10 h-full max-h-[250px] w-full object-cover object-center"
+            classNames={{ wrapper: "!max-w-full" }}
           />
           <div className="absolute inset-0 z-20 h-full w-full bg-black/40 dark:bg-black/30"></div>
         </div>
