@@ -1,3 +1,4 @@
+import BusinessArticles from "@/components/sections/homepage/BusinessArticles";
 import ClientReviewsSection from "@/components/sections/homepage/ClientReviewsSection";
 import HeroSection from "@/components/sections/homepage/HeroSection";
 import OurProducts from "@/components/sections/homepage/OurProducts";
@@ -16,6 +17,7 @@ export default function Home() {
       <ShowCaseOfOurWork />
       <OurProducts />
       <ClientReviewsSection />
+      <BusinessArticles />
     </>
   );
 }
