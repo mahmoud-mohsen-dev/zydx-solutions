@@ -72,6 +72,9 @@ const config = {
           "dark-active": "#5c5c5c",
           darker: "#474747",
         },
+        black:{
+          dark: '#212529'
+        }
         // Background / Foreground tokens
         // background: {
         //   light: "#fafafa",
@@ -86,6 +89,7 @@ const config = {
       boxShadow: {
         navbar: "0px 5px 10px 6px rgba(0,0,0,0.12)",
         "what_we_do": "0px 4px 12px 0px rgba(155,155,155,0.25)",
+        "product_card": "0px 3px 15px 3.75px rgba(0,0,0,0.03)"
       },
       dropShadow: {
         'dark-mode-icon': '0 4px 4px rgba(0,0,0,0.25)',

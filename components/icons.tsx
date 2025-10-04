@@ -127,6 +127,48 @@ export const ArrowTopRight = ({
   </svg>
 );
 
+export const EducareEkt = ({
+  size = 37,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg fill="none" height={size || height} width={size || width} {...props}>
+    <path
+      d="M13.0001 8.61792L17.0501 12.6679C17.6501 13.2679 18.8501 13.2679 19.4501 12.6679L23.5001 8.61792C24.5501 7.56792 23.8001 5.61792 22.3001 5.61792H14.2001C12.7001 5.76792 11.9501 7.56792 13.0001 8.61792Z"
+      stroke="#663ACD"
+      strokeWidth="2.25"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M13.0001 29.3176L17.0501 25.2676C17.6501 24.6676 18.8501 24.6676 19.4501 25.2676L23.5001 29.3176C24.5501 30.3676 23.8001 32.3176 22.3001 32.3176H14.2001C12.7001 32.1676 11.9501 30.3676 13.0001 29.3176Z"
+      stroke="#663ACD"
+      strokeWidth="2.25"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M3.55002 18.218L6.85002 12.968C7.30002 12.068 8.50002 11.918 9.25002 12.668L14.5 17.918C15.1 18.518 15.1 19.418 14.5 20.018L9.25002 25.268C8.50002 26.018 7.45002 25.868 6.85002 24.968L3.55002 19.718C3.10002 19.268 3.10002 18.668 3.55002 18.218Z"
+      stroke="#663ACD"
+      strokeWidth="2.25"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M32.95 18.2178L29.65 12.9678C29.2 12.2178 28 12.0678 27.25 12.6678L22 17.9178C21.4 18.5178 21.4 19.4178 22 20.0178L27.25 25.2678C28 26.0178 29.05 25.8678 29.65 24.9678L32.95 19.7178C33.4 19.2678 33.4 18.6678 32.95 18.2178Z"
+      stroke="#663ACD"
+      strokeWidth="2.25"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 // export const Logo: React.FC<IconSvgProps> = ({
 //   size = 36,
 //   width,

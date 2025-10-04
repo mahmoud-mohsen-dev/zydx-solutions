@@ -1,4 +1,5 @@
 import HeroSection from "@/components/sections/homepage/HeroSection";
+import OurProducts from "@/components/sections/homepage/OurProducts";
 import OurServices from "@/components/sections/homepage/OurServices";
 import ServiceDescription from "@/components/sections/homepage/ServiceDescription";
 import ShowCaseOfOurWork from "@/components/sections/homepage/ShowCaseOfOurWork";
@@ -12,6 +13,7 @@ export default function Home() {
       <OurServices />
       <ServiceDescription />
       <ShowCaseOfOurWork />
+      <OurProducts />
     </>
   );
 }

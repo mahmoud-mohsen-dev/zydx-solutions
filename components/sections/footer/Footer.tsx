@@ -25,7 +25,7 @@ function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 justify-between gap-4 lg:grid-cols-[repeat(4,max-content)]">
+          <div className="grid grid-cols-2 justify-between gap-4 gap-y-6 lg:grid-cols-[repeat(4,max-content)]">
             {quickCategories &&
               quickCategories.length > 0 &&
               quickCategories.map((category) => (
